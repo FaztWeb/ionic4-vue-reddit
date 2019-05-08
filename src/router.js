@@ -2,9 +2,11 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 
-Vue.use(Router)
+import {IonicVueRouter} from '@ionic/vue'
 
-export default new Router({
+Vue.use(IonicVueRouter)
+
+export default new IonicVueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
@@ -12,6 +14,12 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/detail',
+      name: 'detail',
+      component: () => import('./views/Detail.vue'),
+      props: true
     },
     {
       path: '/about',

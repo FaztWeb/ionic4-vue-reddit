@@ -1,4 +1,5 @@
 # ionic4-vue-reddit
+![](docs/screenshot.png)
 
 ## Project setup
 ```
